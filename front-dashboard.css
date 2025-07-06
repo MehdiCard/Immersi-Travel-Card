@@ -1,0 +1,167 @@
+/* assets/css/front-dashboard.css */
+
+/* Global wrapper styling */
+.itc-revendeur-history,
+.itc-dashboard {
+    font-family: Arial, sans-serif;
+    background: #fff;
+    padding: 20px;
+    border: 1px solid #e1e1e1;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    color: #23282d;
+}
+
+/* Tabs container */
+.itc-tabs,
+.itc-history-tabs {
+    display: flex;
+    border-bottom: 2px solid #ccc;
+    margin-bottom: 20px;
+    list-style: none;
+    padding: 0;
+}
+
+/* Tab items */
+.itc-tabs li,
+.itc-history-tabs li {
+    margin-right: 1em;
+}
+
+.itc-tabs li a,
+.itc-history-tabs li {
+    display: inline-block;
+    padding: 10px 15px;
+    cursor: pointer;
+    color: #0073aa;
+    text-decoration: none;
+    border: 1px solid transparent;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+    transition: background-color 0.2s ease;
+}
+
+.itc-tabs li:hover,
+.itc-history-tabs li:hover {
+    background: #f1f1f1;
+}
+
+/* Active tab style */
+.itc-tab-active,
+.itc-history-tabs li.active {
+    background: #fff;
+    color: #23282d;
+    border-color: #ccc;
+    border-bottom-color: transparent;
+    font-weight: bold;
+}
+
+/* Tab content panels */
+.itc-tab-content,
+.itc-history-tab-content {
+    display: none;
+}
+
+.itc-tab-content.active,
+.itc-history-tab-content.active {
+    display: block;
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+/* DataTable override for consistency */
+.dataTables_wrapper {
+    margin-top: 20px;
+}
+
+.dataTables_length select,
+.dataTables_filter input {
+    margin-left: 5px;
+    padding: 4px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+
+/* Customize the print button */
+#itc-print-selected-orders {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 8px 12px;
+    background-color: #0073aa;
+    color: #fff;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+#itc-print-selected-orders:hover {
+    background-color: #006799;
+}
+
+/* Checkbox styling */
+.itc-order-select {
+    width: 16px;
+    height: 16px;
+    cursor: pointer;
+}
+
+/* Layout for side-by-side activation blocks */
+#itc_code_fields {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+}
+
+/* Style des blocs d’activation (alternance discrète) */
+.itc-activation-block:nth-child(odd) {
+    background-color: #f0f8ff;
+}
+.itc-activation-block:nth-child(even) {
+    background-color: #e8f4ff;
+}
+
+.itc-activation-block {
+    padding: 1em;
+    border: 2px solid #0073aa;
+    border-radius: 4px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+.itc-activation-block legend {
+    font-weight: bold;
+    color: #0073aa;
+    padding: 0 0.5em;
+}
+
+/* Input and select focus */
+#itc-activation-form input:focus,
+#itc-activation-form select:focus {
+    border-color: #0073aa;
+    outline: none;
+    box-shadow: 0 0 5px rgba(0,123,255,0.25);
+}
+
+/* Error / Success messages */
+.itc-error,
+.itc-success {
+    padding: 10px;
+    margin-bottom: 15px;
+    border-radius: 3px;
+}
+
+.itc-error {
+    background-color: #ffebe8;
+    border: 1px solid #dc3232;
+    color: #dc3232;
+}
+
+.itc-success {
+    background-color: #dff0d8;
+    border: 1px solid #46b450;
+    color: #46b450;
+}
